@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/displayWeather.js" defer></script>
+    <script src="scripts/fetchWeather.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__search-wrapper">
+        <div class="search-wrapper__cities-list"></div>
+        <div class="header__search-box">
+          <input
+            type="text"
+            class="search-box__input"
+            id="search-input"
+            placeholder="Start typing to search..."
+          />
+        </div>
+        <button class="search-box__btn" id="search-btn">
+          <img
+            src="sources/svg/search-icon.svg"
+            class="search-box__icon"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="header__weather-info">
+        <div class="weather-info__weather-main">
+          <div class="weather-info__weather-details">
+            <div class="weather-info__weather-picture" id="weather-picture">
+              =
+            </div>
+            <ul class="weather-details__details-list">
+              <li class="weather-details__temp weather-bold">
+                <h2 class="weather-bold" id="weather-curr-temp">-</h2>
+              </li>
+              <li class="weather-details__weather-type">-</li>
+              <li class="weather-details__type-desc weather-secondary">-</li>
+            </ul>
+          </div>
+          <div class="weather-info__weather-date">
+            <h2 class="weather-date__location weather-bold">-</h2>
+            <p class="weather-date__date weather-secondary">-</p>
+          </div>
+        </div>
+        <div class="weather-info__weather-temp">
+          <div class="weather-temp__temp-block temp-min">
+            <span class="weather-secondary">Min</span>
+            <h2 class="weather-bold" id="min-temp">-</h2>
+          </div>
+          <div class="weather-temp__temp-block temp-max">
+            <span class="weather-secondary">Max</span>
+            <h2 class="weather-bold" id="max-temp">-</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__content-wrapper">
+        <section class="content-wrapper__popular-cities">
+          <h2 class="section-title">
+            Check the weather in most popular cities in the world
+          </h2>
+          <div class="popular-cities__cities-list">
+            <div class="cities-list__city-card" data-value="5128638">
+              <img
+                src="sources/img/city-new-york.jpg"
+                class="city-item__picture"
+                alt="New York"
+              />
+              <div class="city-item__city-name">New York</div>
+            </div>
+            <div class="cities-list__city-card" data-value="2643743">
+              <img
+                src="sources/img/city-london.jpg"
+                class="city-item__picture"
+                alt="London"
+              />
+              <div class="city-item__city-name">London</div>
+            </div>
+            <div class="cities-list__city-card" data-value="292223">
+              <img
+                src="sources/img/city-dubai.jpg"
+                class="city-item__picture"
+                alt="Dubai"
+              />
+              <div class="city-item__city-name">Dubai</div>
+            </div>
+            <div class="cities-list__city-card" data-value="2988507">
+              <img
+                src="sources/img/city-paris.jpg"
+                class="city-item__picture"
+                alt="Paris"
+              />
+              <div class="city-item__city-name">Paris</div>
+            </div>
+          </div>
+        </section>
+        <section class="content-wrapper__FAQ">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="FAQ__FAQ-list">
+            <div class="FAQ__question-item">
+              <div class="question-item__title">
+                Question 1
+                <div class="question-item__arrow-btn">
+                  <img
+                    class="arrow-btn__icon"
+                    src="sources/svg/arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="question-item__content">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth, the master-builder
+                of human happiness. No one rejects, dislikes, or avoids pleasure
+                itself, because it is pleasure, but because those who do not
+                know how to pursue pleasure rationally encounter consequences
+                that are extremely painful.
+              </div>
+            </div>
+            <div class="FAQ__question-item">
+              <div class="question-item__title">
+                Question 2
+                <div class="question-item__arrow-btn">
+                  <img
+                    class="arrow-btn__icon"
+                    src="sources/svg/arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="question-item__content">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth, the master-builder
+                of human happiness. No one rejects, dislikes, or avoids pleasure
+                itself, because it is pleasure, but because those who do not
+                know how to pursue pleasure rationally encounter consequences
+                that are extremely painful.
+              </div>
+            </div>
+            <div class="FAQ__question-item">
+              <div class="question-item__title">
+                Question 3
+                <div class="question-item__arrow-btn">
+                  <img
+                    class="arrow-btn__icon"
+                    src="sources/svg/arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="question-item__content">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth, the master-builder
+                of human happiness. No one rejects, dislikes, or avoids pleasure
+                itself, because it is pleasure, but because those who do not
+                know how to pursue pleasure rationally encounter consequences
+                that are extremely painful.
+              </div>
+            </div>
+            <div class="FAQ__question-item">
+              <div class="question-item__title">
+                Question 4
+                <div class="question-item__arrow-btn">
+                  <img
+                    class="arrow-btn__icon"
+                    src="sources/svg/arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="question-item__content">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system, and expound the actual
+                teachings of the great explorer of the truth, the master-builder
+                of human happiness. No one rejects, dislikes, or avoids pleasure
+                itself, because it is pleasure, but because those who do not
+                know how to pursue pleasure rationally encounter consequences
+                that are extremely painful.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      Рамус Ілля Юрійович (іпс-22)<span
+        id="currentYear"
+        class="footer__year"
+      ></span>
+    </footer>
+  </body>
+</html>
